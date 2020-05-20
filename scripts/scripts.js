@@ -34,7 +34,7 @@ function DeleteSubmissionByName(sArray, name){
 };
 
 function editSubmission(sArray, index, score){
-    sArray.forEach((s) => {
+    sArray.forEach((s, index) => {
         if(index === s.index){
             s.score = score;
             return sArray[s].score;

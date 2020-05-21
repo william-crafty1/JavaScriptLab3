@@ -59,13 +59,11 @@ function findLowestScore(sArray){
 
 
 function findAverageScore(sArray){
-    let sum = sArray[0].score;
-    let average = 0;
+    let sum = 0;
     for(let s of sArray){
-        sum.score += sArray[s];
+        sum += s.score;
     }
-    average = sum / sArray.length;
-    return average;
+    return sum / sArray.length;
 
 }
 

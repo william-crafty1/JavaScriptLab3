@@ -34,12 +34,8 @@ function DeleteSubmissionByName(sArray, name){
 };
 
 function editSubmission(sArray, index, score){
-    sArray.forEach((s) => {
-        if(index === s.index){
-            s.score = score;
-            return sArray[s].score;
-        }
-    })
+    sArray[index].score = score;
+    sArray[index].passed = score >= 60;
 };
 
 function findSubmissionByName(sArray, name){
@@ -114,7 +110,7 @@ function countElements(sArray){
 // console.log(addSubmission(submissions, "William", 100, "2020-05-20"));
 // console.log(DeleteSubmissionByIndex(submissions, 0));
 // console.log(DeleteSubmissionByName(submissions, "Jill"));
-console.log(editSubmission(submissions, 0, 10));
+editSubmission(submissions, 0, 10);
 console.log(findSubmissionByName(submissions, "Jack"));
 console.log(findLowestScore(submissions));
 console.log(findAverageScore(submissions));
